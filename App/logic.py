@@ -144,7 +144,6 @@ def load_books_tags(catalog, filename):
 
 # Funciones de consulta
 
-
 def book_size(catalog):
     """
     Obtiene el tamaño del conjunto de libros.
@@ -155,7 +154,7 @@ def book_size(catalog):
     :returns: Tamaño del conjunto de libros
     :rtype: int
     """
-    return set.size(catalog["books"])
+    return len(catalog["books"])
 
 
 def tag_size(catalog):
@@ -168,7 +167,7 @@ def tag_size(catalog):
     :returns: Tamaño del conjunto de tags
     :rtype: int
     """
-    return set.size(catalog["tags"])
+    return len(catalog["tags"])
 
 
 def book_tag_size(catalog):
@@ -181,7 +180,7 @@ def book_tag_size(catalog):
     :returns: Tamaño del conjunto de tags de los libros
     :rtype: int
     """
-    return set.size(catalog["book_tags"])
+    return len(catalog["book_tags"])
 
 
 def empty_books(catalog):
@@ -195,7 +194,7 @@ def empty_books(catalog):
     :rtype: bool
     """
     books = catalog["books"]
-    return set.is_empty(books)
+    return len(books) == 0
 
 
 def empty_tags(catalog):
@@ -209,7 +208,7 @@ def empty_tags(catalog):
     :rtype: bool
     """
     tags = catalog["tags"]
-    return set.is_empty(tags)
+    return len(tags) == 0
 
 
 def empty_book_tags(catalog):
@@ -223,4 +222,4 @@ def empty_book_tags(catalog):
     :rtype: bool
     """
     book_tags = catalog["book_tags"]
-    return set.is_empty(book_tags)
+    return len(book_tags) == 0

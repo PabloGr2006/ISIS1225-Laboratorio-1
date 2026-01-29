@@ -60,6 +60,7 @@ def print_menu():
     # TODO: Mods Lab 1, agregar la opcion 3.
     # Agregue la opción 3 para cargar los tags de los libros.
     # Pueede guiarse de las opciones 1 y 2.
+    print("3-Cargar tags de libros")
     print("0- Salir")
 
 
@@ -135,7 +136,11 @@ def main():
         # Puede guiarse de las opciones 1 y 2.
         # Imprima el total de tags de los libros cargados.
         elif int(inputs[0]) == 3:
-            pass
+            print("Cargando informacion de tags de libros en el catalogo...")
+            book_tags = load_books_tags(app)
+            print("Total de tags de libros cargados: " + str(book_tags) + "\n")
+
+
 
         elif int(inputs[0]) == 0:
             working = False
